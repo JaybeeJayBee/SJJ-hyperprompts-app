@@ -67,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error('Error:', error);
-                geminiResponse.textContent = 'An error occurred. Please try again or contact support.';
+                // Display the full error message on the page for debugging
+                geminiResponse.textContent = `An error occurred: ${error.message}`;
             }
         });
     }
