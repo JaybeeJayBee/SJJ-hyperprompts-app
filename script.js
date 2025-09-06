@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             responseContainer.style.display = 'block';
 
             // The URL for your live API Gateway endpoint
-            const API_GATEWAY_URL = 'https://ae8r7cbe7h.execute-api.us-east-2.amazonaws.com/V1';
+            const API_GATEWAY_URL = 'https://d9f4l66ocb.execute-api.us-east-2.amazonaws.com/V1';
 
             try {
                 const response = await fetch(API_GATEWAY_URL, {
