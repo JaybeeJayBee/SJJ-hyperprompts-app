@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SJJHYPERPROMPTSGLITCH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>SJJHYPERPROMPTSGLITCH</h1>
+        <h2>Prompt Processing Interface</h2>
+        <form id="prompt-form">
+            <div class="input-group">
+                <label for="brief-info">Brief Info (max 500 chars):</label>
+                <textarea id="brief-info" maxlength="500" required></textarea>
+                <span id="char-count">0/500</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="encrypted-prompt">Encrypted Prompt:</label>
+                <textarea id="encrypted-prompt" placeholder="Paste your encrypted prompt here..." required></textarea>
+            </div>
+            
+            <button type="submit">Send to Gemini AI</button>
+        </form>
+
+        <div id="response-container">
+            <h3>Gemini Response:</h3>
+            <pre id="gemini-response"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #00bcd4; /* Cyan/Teal */
+    --accent-color: #ff4081;  /* Pink */
+    --background-dark: #222831; /* Dark Gray */
+    --card-dark: #393e46;     /* Slightly lighter Dark Gray */
+    --text-light: #eeeeee;
+    --text-dark: #cccccc;
+    --border-color: #00a8cc; /* Darker cyan */
+    --hover-bg: #0097a7;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-light);
+    overflow: hidden; /* Prevent scrollbar if there are subtle animations */
+}
+
+/* Subtle background animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at top left, rgba(0,255,255,0.1) 0%, transparent 20%),
+        radial-gradient(circle at bottom right, rgba(255,0,255,0.1) 0%, transparent 20%);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.login-container {
+    background-color: var(--card-dark);
+    padding: 2.5rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    /* Adding a subtle border gradient effect */
+    background: linear-gradient(135deg, var(--card-dark) 95%, rgba(0,255,255,0.2) 100%) padding-box,
+                linear-gradient(135deg, var(--primary-color), var(--accent-color)) border-box;
+    border: 2px solid transparent;
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0,255,255,0.5); /* Subtle glow */
+}
+
+h2 {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    align-self: flex-start;
+    font-weight: 400;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px rgba(255, 64, 129, 0.4); /* Pink glow on focus */
+}
+
+button {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3); /* Initial subtle shadow */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5); /* Enhanced shadow on hover */
+}/* --- Dashboard Page Styling --- */
+.dashboard-container {
+    background-color: var(--card-dark);
+    padding: 2.5rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--card-dark) 95%, rgba(0,255,255,0.2) 100%) padding-box,
+                linear-gradient(135deg, var(--primary-color), var(--accent-color)) border-box;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px rgba(255, 64, 129, 0.4);
+}
+
+#char-count {
+    align-self: flex-end;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+    margin-top: 0.25rem;
+}
+
+#response-container {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+#response-container h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#gemini-response {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.95rem;
+}
+
